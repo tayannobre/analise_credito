@@ -77,4 +77,12 @@ O modelo foi testado em um novo conjunto de dados (`novocredito.csv`), e a predi
 - Levels: bom ruim 
 
 **Observação**
-- O conjunto de dados (`novocredito.csv`) contém 6 novos registros ( novos clientes).
+- O conjunto de dados (`novocredito.csv`) contém 6 novos registros ( novos clientes) que ainda não possuem a classificação (classe) preenchida. O modelo irá prever automaticamente se cada cliente é bom ou ruim.
+
+## 📝 Considerações Finais
+
+Este projeto é um exemplo inicial de Machine Learning para análise de crédito usando Naive Bayes no R.
+
+O modelo teve uma taxa de acerto global de 75%, funcionando melhor para clientes bons do que para clientes ruins.
+
+Limitações: base de dados pequena e uso de apenas um modelo simples.
