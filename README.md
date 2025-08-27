@@ -4,16 +4,25 @@ Este repositório contém um projeto inicial de **Machine Learning** aplicado à
 
 ---
 
+## 📊 Objetivo
+Prever se um cliente é considerado bom ou ruim pagador utilizando dados históricos de crédito e características do cliente.
+
+---
+
+## ⚙️ Código e Fluxo do Projeto
+
 ```R
-# Instalando e carregando o pacote
+# 1. Instalação e carregamento do pacote
 install.packages("e1071")
 library(e1071)
 
-# Carregando o conjunto de dados
+# 2. Carregando o conjunto de dados
 creditO <- read.csv(file.choose(), sep = ",", header = TRUE)
+
+# 2.1 Visualizando as primeiras linhas
 head(creditO)
 
-# Divisão em treino e teste
+# 3. Divisão em treino e teste
 amostra <- sample(2, nrow(creditO), replace=TRUE, prob=c(0.7,0.3))
 creditotreino <- creditO[amostra==1,]
 creditoteste  <- creditO[amostra==2,]
@@ -21,11 +30,11 @@ creditoteste  <- creditO[amostra==2,]
 dim(creditotreino)
 dim(creditoteste)
 
-# Criação do modelo Naive Bayes
+# 4. Criação do modelo Naive Bayes
 modelo <- naiveBayes(CLASSE ~ ., creditotreino)
 class(modelo)
 
-# Predição e avaliação do modelo
+# 5. Predição e avaliação do modelo
 predicao <- predict(modelo, creditoteste)
 confusao <- table(creditoteste$CLASSE, predicao)
 
@@ -35,7 +44,7 @@ taxadeerro   <- (confusao[2] + confusao[3]) / sum(confusao)
 taxadeacerto
 taxadeerro
 
-# Testando novos clientes
+# 6. Testando novos clientes
 novocredito <- read.csv(file.choose(), sep=",", header=TRUE)
 predict(modelo, novocredito)
 
