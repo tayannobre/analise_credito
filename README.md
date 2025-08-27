@@ -11,7 +11,7 @@ Prever se um cliente é considerado **"bom" ou "ruim" pagador** com base em atri
 
 ## ⚙️ Etapas do Projeto
 
-1. **Instalação do pacote**
+1. **Instalando e carregando o pacote**
    ```R
    install.packages("e1071")
    library(e1071)
