@@ -77,4 +77,4 @@ O modelo foi testado em um novo conjunto de dados (`novocredito.csv`), e a predi
 - Levels: bom ruim 
 
 **Observação**
-- O conjunto de dados (`novocredito.csv`) contém novos registros ( novos clientes).
+- O conjunto de dados (`novocredito.csv`) contém 6 novos registros ( novos clientes).
