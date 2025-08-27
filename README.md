@@ -18,7 +18,7 @@ Prever se um cliente é considerado **"bom" ou "ruim" pagador** com base em atri
 
 2. **Carregando o dataset**
    ```R
-   creditO = read.csv("data/credito.csv", sep=",", header=TRUE)
+   creditO = read.csv(file.choose(), sep=",", header=T)
 
 3. **Divisão em treino e teste**
    ```R
@@ -41,7 +41,7 @@ Prever se um cliente é considerado **"bom" ou "ruim" pagador** com base em atri
 
 6. **Testando o modelo (testando novos clientes)**
    ```R
-   novocredito = read.csv("data/novocredito.csv", sep=",", header=TRUE) # carregando um novo conjunto de dados para o qual você quero se os novos clientes são "bom" ou "ruim" pagador.
+   novocredito = read.csv(file.choose(), sep=",", header=T) # carregando um novo conjunto de dados para o qual você quero se os novos clientes são "bom" ou "ruim" pagador.
    predict(modelo, novocredito) # fazendo a previsão se o novo cliente é "bom" ou "ruim" pagador.
 
 
