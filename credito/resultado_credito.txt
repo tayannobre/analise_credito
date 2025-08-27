@@ -1,0 +1,184 @@
+### RESULTADO 
+> # criação do modelo
+> modelo = naiveBayes(CLASSE  ~ . , creditotreino  )
+> modelo
+
+Naive Bayes Classifier for Discrete Predictors
+
+Call:
+naiveBayes.default(x = X, y = Y, laplace = laplace)
+
+A-priori probabilities:
+Y
+      bom      ruim 
+0.7033898 0.2966102 
+
+Conditional probabilities:
+      CHEQUEESPECIAL
+Y              <0      >=200   0<=X<200 sem cheque
+  bom  0.21285141 0.07429719 0.21686747 0.49598394
+  ruim 0.44285714 0.03333333 0.36190476 0.16190476
+
+      USO_CREDITO
+Y          [,1]     [,2]
+  bom  19.69478 11.21974
+  ruim 25.47143 13.30869
+
+      HISTORICO_CREDITO
+Y      atrasos anteriores cr?tica / outros de cr?dito existente
+  bom          0.08032129                            0.35341365
+  ruim         0.08571429                            0.17142857
+      HISTORICO_CREDITO
+Y      existente e pago sem cr?ditos/todos pagos todos pagos
+  bom        0.51004016               0.02208835  0.03413655
+  ruim       0.59047619               0.06190476  0.09047619
+
+      PROPOSITO
+Y       carro novo carro usado Computador/TV    educa??o Eletrodom?sticos
+  bom  0.210843373 0.120481928   0.313253012 0.038152610      0.014056225
+  ruim 0.309523810 0.061904762   0.180952381 0.090476190      0.014285714
+      PROPOSITO
+Y      mobilia/equipamento    neg?cios       obras      outros qualifica??o
+  bom          0.166666667 0.092369478 0.024096386 0.008032129  0.012048193
+  ruim         0.195238095 0.090476190 0.033333333 0.023809524  0.000000000
+
+      BALANCO_ATUAL
+Y          [,1]    [,2]
+  bom  3056.281 2510.15
+  ruim 4231.352 3758.47
+
+      BALANCO_MEDIO_CREDITO
+Y            <100     >=1000 100<=X<500 500<=X<1000
+  bom  0.55622490 0.06024096 0.10240964  0.06626506
+  ruim 0.71904762 0.01904762 0.10952381  0.03809524
+      BALANCO_MEDIO_CREDITO
+Y      nenhuma economia conhecida
+  bom                  0.21485944
+  ruim                 0.11428571
+
+      EMPREGADO
+Y              <1        >=7     1<=X<4     4<=X<7 desempregado
+  bom  0.15060241 0.28112450 0.34136546 0.17469880   0.05220884
+  ruim 0.23333333 0.22857143 0.32857143 0.13333333   0.07619048
+
+      LOCAL
+Y          [,1]     [,2]
+  bom  2.963855 1.130650
+  ruim 3.057143 1.100922
+
+      ESTADOCIVIL
+Y      fem div/cas masculino casado/viuvo masculino div/sep
+  bom   0.28313253             0.08634538        0.03413655
+  ruim  0.37142857             0.06666667        0.06190476
+      ESTADOCIVIL
+Y      masculino solteiro
+  bom          0.59638554
+  ruim         0.50000000
+
+      OUTRASFUNCOES
+Y      co requerente     fiador     nenhum
+  bom     0.03815261 0.07028112 0.89156627
+  ruim    0.07142857 0.03809524 0.89047619
+
+      RESIDENCIADESDE
+Y          [,1]     [,2]
+  bom  2.827309 1.114337
+  ruim 2.823810 1.094748
+
+      TIPOSBENS
+Y      bens im?veis     carro nenhuma conhecida seguro de vida
+  bom     0.3132530 0.3152610         0.1305221      0.2409639
+  ruim    0.1857143 0.3333333         0.2428571      0.2380952
+
+      IDADE
+Y          [,1]     [,2]
+  bom  36.25301 11.15937
+  ruim 34.19048 11.07443
+
+      OUTROSPLANOSPGTO
+Y           banco     nenhum     stores
+  bom  0.11244980 0.84738956 0.04016064
+  ruim 0.19047619 0.75238095 0.05714286
+
+      RESIDENCIA
+Y         alugada gratuitamente    pr?pria
+  bom  0.14658635    0.09437751 0.75903614
+  ruim 0.24285714    0.15238095 0.60476190
+
+      CREDITOSEXISTENTES
+Y          [,1]      [,2]
+  bom  1.425703 0.5740025
+  ruim 1.385714 0.5859485
+
+      EMPREGO
+Y      alta qualifica??o/autonomo/Gerente especializado n?o especializado
+  bom                          0.13654618    0.62851406        0.22289157
+  ruim                         0.18571429    0.63809524        0.14761905
+      EMPREGO
+Y      unemp/unespecializado non res
+  bom                     0.01204819
+  ruim                    0.02857143
+
+      DEPENDENTES
+Y          [,1]      [,2]
+  bom  1.174699 0.3800911
+  ruim 1.166667 0.3735685
+
+      TRABAESTRANGEIRO
+Y             n?o        sim
+  bom  0.04417671 0.95582329
+  ruim 0.01904762 0.98095238
+
+> 
+> # clase do modelo
+> class(modelo)
+[1] "naiveBayes"
+> 
+> # verificando o desempenho do meu modelo
+> predicao = predict(modelo, creditoteste)
+> predicao
+  [1] ruim ruim bom  bom  bom  bom  bom  bom  bom  bom  bom  bom  bom  ruim
+ [15] bom  bom  bom  ruim bom  ruim bom  bom  bom  ruim bom  bom  bom  bom 
+ [29] bom  bom  bom  bom  bom  bom  bom  bom  bom  bom  bom  bom  bom  bom 
+ [43] ruim bom  ruim bom  bom  bom  bom  ruim bom  ruim ruim bom  bom  bom 
+ [57] bom  bom  ruim bom  bom  ruim bom  ruim ruim ruim bom  ruim bom  bom 
+ [71] bom  bom  bom  bom  ruim bom  bom  bom  bom  ruim bom  bom  ruim bom 
+ [85] bom  bom  bom  bom  ruim bom  bom  bom  ruim bom  ruim bom  bom  ruim
+ [99] bom  bom  ruim ruim bom  bom  bom  bom  bom  bom  bom  ruim bom  bom 
+[113] bom  bom  bom  ruim bom  bom  bom  bom  bom  bom  bom  bom  bom  bom 
+[127] bom  bom  bom  bom  ruim ruim bom  bom  bom  bom  bom  bom  bom  bom 
+[141] ruim bom  bom  bom  bom  bom  bom  bom  bom  bom  bom  bom  bom  bom 
+[155] bom  ruim bom  bom  ruim bom  bom  bom  bom  bom  bom  bom  bom  bom 
+[169] bom  bom  bom  bom  bom  ruim bom  bom  bom  bom  bom  bom  bom  ruim
+[183] bom  bom  bom  ruim ruim bom  ruim bom  ruim bom  bom  ruim bom  bom 
+[197] ruim bom  ruim bom  bom  bom  bom  bom  ruim ruim bom  ruim bom  bom 
+[211] bom  bom  bom  ruim bom  bom  bom  bom  bom  bom  bom  ruim ruim bom 
+[225] bom  bom  bom  ruim bom  bom  bom  bom  ruim bom  bom  bom  ruim bom 
+[239] bom  bom  bom  bom  ruim ruim bom  bom  bom  bom  bom  bom  bom  bom 
+[253] bom  bom  ruim bom  bom  bom  bom  bom  bom  bom  bom  bom  bom  bom 
+[267] bom  bom  ruim ruim ruim bom  bom  bom  bom  ruim bom  bom  bom  bom 
+[281] bom  bom  bom  bom  bom  bom  bom  ruim bom  bom  ruim ruim
+Levels: bom ruim
+> 
+> # criando a matriz de confusão do modelo
+> confusao = table(creditoteste$CLASSE, predicao)
+> confusao
+      predicao
+       bom ruim
+  bom  180   22
+  ruim  51   39
+> 
+> # taxa de acerto 
+> taxadeacerto = (confusao[1] + confusao[4]) / sum(confusao)
+> taxadeacerto
+[1] 0.75
+> 
+> # taxa de erro
+> taxaerro = (confusao[2] + confusao[3]) / sum(confusao)
+> taxaerro
+[1] 0.25
+
+# fazendo a previsão se o novo cliente é "bom" ou "ruim" pagador.
+> predict(modelo, novocredito)
+[1] ruim bom  bom  bom  bom  bom  ruim bom 
+Levels: bom ruim
