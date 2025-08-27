@@ -1,0 +1,9 @@
+CHEQUEESPECIAL,USO_CREDITO,HISTORICO_CREDITO,PROPOSITO,BALANCO_ATUAL,BALANCO_MEDIO_CREDITO,EMPREGADO,LOCAL,ESTADOCIVIL,OUTRASFUNCOES,RESIDENCIADESDE,TIPOSBENS,IDADE,OUTROSPLANOSPGTO,RESIDENCIA,CREDITOSEXISTENTES,EMPREGO,DEPENDENTES,TRABAESTRANGEIRO,CLASSE
+0<=X<200,12,existente e pago,carro usado,6945,<100,1<=X<4,2,masculino solteiro,nenhum,2,carro,35,nenhum,alugada,1,alta qualifica??o/autonomo/Gerente,1,sim,
+sem cheque,12,existente e pago,Computador/TV,3059,>=1000,4<=X<7,2,masculino div/sep,nenhum,2,bens imoveis,61,nenhum,pr?pria,1,n?o especializado,1,sim,
+sem cheque,12,existente e pago,carro novo,2390,nenhuma economia conhecida,>=7,4,masculino solteiro,nenhum,4,carro,50,nenhum,pr?pria,1,especializado,1,sim,
+sem cheque,12,existente e pago,mobilia/equipamento,1736,<100,4<=X<7,3,fem div/cas,nenhum,4,bens im?veis,30,nenhum,pr?pria,1,n?o especializado,1,sim,
+<0,30,existente e pago,carro usado,3857,<100,1<=X<4,4,masculino div/sep,nenhum,4,seguro de vida,45,nenhum,pr?pria,1,alta qualifica??o/autonomo/Gerente,1,sim,
+sem cheque,12,existente e pago,Computador/TV,804,<100,>=7,4,masculino solteiro,nenhum,2,carro,38,nenhum,pr?pria,1,especializado,1,sim,
+<0,45,existente e pago,Computador/TV,1845,<100,1<=X<4,4,masculino solteiro,nenhum,4,nenhuma conhecida,30,nenhum,gratuitamente,1,especializado,1,sim,
+0<=X<200,45,cr?tica / outros de cr?dito existente,carro usado,4576,100<=X<500,desempregado,3,masculino solteiro,nenhum,4,carro,30,nenhum,pr?pria,1,especializado,1,sim,
