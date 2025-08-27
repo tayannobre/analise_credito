@@ -20,11 +20,11 @@ Prever se um cliente é considerado **"bom" ou "ruim" pagador** com base em atri
    
 2. **Importar dataset**
    ```R
-creditO <- read.csv(file.choose(), sep = ",", header = TRUE)
+   creditO <- read.csv(file.choose(), sep = ",", header = TRUE)
 
 # Visualizar primeiras linhas
    ```R
-head(creditO)
+   head(creditO)
 
 
    
