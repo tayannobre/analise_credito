@@ -1,6 +1,6 @@
 # 🏦 Análise de Crédito com Naive Bayes (R)
 
-Este repositório contém um projeto inicial de **Machine Learning** aplicado à **análise de crédito de clientes**, utilizando o algoritmo **Naive Bayes** no R.
+Este repositório contém um projeto simples de **Machine Learning** aplicado à **análise de crédito de clientes**, utilizando o algoritmo **Naive Bayes** no R.
 
 ---
 
