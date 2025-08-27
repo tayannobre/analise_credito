@@ -18,7 +18,7 @@ Prever se um cliente é considerado **"bom" ou "ruim" pagador** com base em atri
    install.packages("e1071")
    library(e1071)
    
-2. # Importar dataset
+2. **Importar dataset**
 creditO <- read.csv(file.choose(), sep = ",", header = TRUE)
 
 # Visualizar primeiras linhas
