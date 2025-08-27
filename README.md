@@ -50,3 +50,31 @@ Prever se um cliente é considerado **"bom" ou "ruim" pagador** com base em atri
 Após o treinamento do modelo com **70% dos dados para treino** e **30% para teste**, foram obtidos os seguintes resultados:  
 
 ### 🔹 Matriz de Confusão
+
+## 📊 Matriz de Confusão do Modelo
+
+A matriz de confusão do modelo Naive Bayes treinado é a seguinte:
+
+| Classe Real \ Classe Prevista | bom | ruim |
+|-------------------------------|-----|------|
+| **bom**                        | 180 | 22   |
+| **ruim**                       | 51  | 39   |
+
+**Explicação:**  
+- **Linhas** → Classe real do cliente (`bom` ou `ruim`).  
+- **Colunas** → Classe prevista pelo modelo (`bom` ou `ruim`).  
+- **Diagonal principal** (180 e 39) → acertos do modelo.  
+- **Valores fora da diagonal** (22 e 51) → erros do modelo.
+
+
+### 🔹 Métricas
+- **Taxa de acerto (acurácia):** `0.75` (75%)  
+- **Taxa de erro:** `0.25` (25%)  
+
+### 🔹 Teste com novos clientes
+O modelo foi testado em um novo conjunto de dados (`novocredito.csv`), e a predição foi:  
+- [1] ruim bom  bom  bom  bom  bom  ruim bom 
+- Levels: bom ruim 
+
+**Observação**
+- O conjunto de dados (`novocredito.csv`) contém novos registros ( novos clientes).
