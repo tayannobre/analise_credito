@@ -22,7 +22,7 @@ Prever se um cliente é considerado **"bom" ou "ruim" pagador** com base em atri
    ```R
    creditO <- read.csv(file.choose(), sep = ",", header = TRUE)
    
-   - 2.1 **Visualizar primeiras linhas**
+   ## 2.1 **Visualizar primeiras linhas**
    ```R
    head(creditO)
 
